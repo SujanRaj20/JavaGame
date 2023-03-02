@@ -3,9 +3,9 @@ package com.mygdx.game;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-public class Alien extends Shapes {
+public class Sultan extends Shapes {
 
-    public Alien(float x, float y, float width, float height) {
+    public Sultan (float x, float y, float width, float height) {
         super(x, y, width, height);
     }
 

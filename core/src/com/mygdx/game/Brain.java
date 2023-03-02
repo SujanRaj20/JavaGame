@@ -63,22 +63,22 @@ public class Brain {
         }//This method updates the position of a Square object based on input events.
     }
 
-    protected void handleInput(Ball ball) {
+    protected void handleInput(Sultan sultan) {
         if (Gdx.input.isTouched()) {
-            ball.x = Gdx.input.getX();
-            ball.y = Gdx.input.getY();
+            sultan.x = Gdx.input.getX();
+            sultan.y = Gdx.input.getY();
         }
         if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
-            ball.y += 15;
+            sultan.y += 15;
         }
         if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            ball.y -= 15;
+            sultan.y -= 15;
         }
         if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            ball.x -= 15;
+            sultan.x -= 15;
         }
         if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            ball.x += 15;
+            sultan.x += 15;
         }
     }
 }

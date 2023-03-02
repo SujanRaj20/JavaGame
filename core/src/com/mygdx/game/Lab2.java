@@ -7,38 +7,38 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Lab2 extends ApplicationAdapter {
-	private Ball ball1;
+	private Sultan sultan1;
 	private Boy boy1;
 	private Alien alien1;
 	private Man man1;
 	private SpriteBatch batch;
 	private Brain brain;
-	private Texture ballImg, boyImg, alienImg, manImg;
+	private Texture sultanImg, boyImg, alienImg, manImg;
 
 	@Override
 	public void create() {
 		batch = new SpriteBatch();
-		ballImg = new Texture("ball.png");
+		sultanImg = new Texture("sultan.png");
 		boyImg = new Texture("boy.png");
 		manImg = new Texture("man.png");
 		alienImg = new Texture("alien.png");
-		ball1 = new Ball(100, 100, 50);
-		boy1 = new Boy(200, 200, 80, 100);
-		man1 = new Man(300, 300, 100, 120);
-		alien1 = new Alien(400, 400, 120, 80);
+		sultan1 = new Sultan (400, 200, 120, 120);
+		boy1 = new Boy(200, 200, 40, 50);
+		man1 = new Man(300, 300, 50, 60);
+		alien1 = new Alien(400, 400, 55, 55);
 		brain = new Brain();
 	}
 
 	@Override
 	public void render() {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		brain.handleInput(ball1);
+		brain.handleInput(sultan1);
 		brain.handleInput(boy1);
 		brain.handleInput(man1);
 		brain.handleInput(alien1);
 
 		batch.begin();
-		ball1.generateImg(batch, ballImg);
+		sultan1.generateImg(batch, sultanImg);
 		boy1.generateImg(batch, boyImg);
 		man1.generateImg(batch, manImg);
 		alien1.generateImg(batch, alienImg);
@@ -47,7 +47,7 @@ public class Lab2 extends ApplicationAdapter {
 
 	@Override
 	public void dispose() {
-		ballImg.dispose();
+		sultanImg.dispose();
 		boyImg.dispose();
 		manImg.dispose();
 		alienImg.dispose();
